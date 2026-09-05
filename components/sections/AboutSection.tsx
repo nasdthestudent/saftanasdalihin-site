@@ -50,22 +50,18 @@ export const AboutSection = () => {
         {/* Text Coloum (Bio) */}
         <div className="lg:w-2/3">
           <p className="mb-4 text-lg text-foreground/80">
-            Hello! I&apos;m Safta Nasdalihin, a dedicated <strong>Smart Contract Developer</strong> based in Indonesia. 
-            My career is focused on architecting and auditing secure, efficient, and transparent applications across various blockchain networks. 
-            I specialize in turning complex concepts into robust, trustless code.
+            Hello! I&apos;m Safta Nasdalihin, an aspiring <strong>Smart Contract Developer</strong> from Indonesia, focused on building secure and reliable applications with <strong>Solidity</strong> and the <strong>EVM</strong>. 
+            I enjoy turning ideas into practical smart contract systems while continuously learning about blockchain architecture, protocol design, and security.
           </p>
 
-          {/* Paragraf 2: Expertise & Clarity on DAO, DeFi, NFT */}
           <p className="mb-4 text-lg text-foreground/80">
-            My technical expertise lies deep within the decentralized stack, with a particular focus on high-value applications. 
-            This includes building core <strong>DeFi</strong> protocols (lending and yield), designing <strong>DAO</strong> governance structures, and developing custom <strong>NFT</strong> standards. 
-            Fundamentally, all these applications—<strong>DeFi, DAOs, and NFTs</strong>—are powered and defined by interconnected <strong>Smart Contracts</strong>.
+            My current focus is on <strong>smart contract development</strong>, especially understanding how decentralized systems work under the hood. 
+            I build and test my contracts using <strong>Foundry</strong>, with an emphasis on writing clear Solidity code, designing robust contract logic, and understanding the trust assumptions behind on-chain applications.
           </p>
 
-          {/* Paragraf 3: Vision, Belief in Blockchain's Future, and Call to Action */}
           <p className="mb-6 text-lg font-medium">
-            I firmly believe that blockchain technology will serve as the foundational infrastructure of the future internet, enabling true digital ownership and permissionless interaction. 
-            I am enthusiastic about leveraging Solidity and cutting-edge decentralized tools to tackle the next generation of digital challenges and contribute to a more open, decentralized world.
+            I&apos;m interested in the problems blockchain can solve through <strong>trustless execution, transparency, and programmable ownership</strong>. 
+            My goal is to grow into a professional smart contract developer and contribute to building decentralized systems that are useful, secure, and genuinely meaningful.
           </p>
 
           {/* Tombol CTA */}
