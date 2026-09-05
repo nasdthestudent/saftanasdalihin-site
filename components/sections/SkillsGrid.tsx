@@ -1,18 +1,21 @@
 // components/sections/SkillsGrid.tsx
-import { SiSolidity, SiEthers, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
-import { FaHardHat } from 'react-icons/fa';
+import { 
+  SiSolidity, 
+  SiEthereum, 
+} from 'react-icons/si';
 
 // My core skills data
 const SKILLS = [
-  { name: 'Solidity', icon: SiSolidity, color: 'text-foreground/70' },
-  { name: 'Hardhat', icon: FaHardHat, color: 'text-yellow-300' },
-  { name: 'Ethers.js', icon: SiEthers, color: 'text-foreground/70' },
-  { name: 'Next.js', icon: SiNextdotjs, color: 'text-foreground' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-500' },
-  // { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
-  // { name: 'Contract Auditing', icon: FaShieldAlt, color: 'text-red-500' },
-  // { name: 'EVM & Protocols', icon: SiEthereum, color: 'text-blue-800' },
-  // { name: 'PostgreSQL / Graph', icon: SiPostgresql, color: 'text-blue-500' },
+  {
+    name: "Solidity",
+    icon: SiSolidity,
+    color: "text-foreground/70",
+  },
+  {
+    name: "EVM & Ethereum",
+    icon: SiEthereum,
+    color: "text-foreground/70",
+  },
 ];
 
 export const SkillsGrid = () => {
