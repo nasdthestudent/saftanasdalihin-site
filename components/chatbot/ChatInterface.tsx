@@ -106,7 +106,7 @@ export const ChatInterface: React.FC = () => {
       >
         {messages.length === 0 && (
           <div className="text-center text-muted-foreground pt-10">
-            Hi! I'm Safta AI. Feel free to ask about this website, my projects, or my expertise in Smart Contracts and Web3.
+            Hi! I&apos;m Safta AI. Feel free to ask about this website, my projects, or my expertise in Smart Contracts and Web3.
           </div>
         )}
 
