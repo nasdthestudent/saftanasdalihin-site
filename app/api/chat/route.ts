@@ -91,10 +91,34 @@ export async function POST(req: Request) {
   try {
     const { messages } = await req.json();
 
-    // Validate messages
-    if (!messages || messages.length === 0) {
+    if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json(
-        { error: 'Message history not found' },
+        { error: 'Invalid message history' },
+        { status: 400 }
+      );
+    }
+
+    if (messages.length > 20) {
+      return NextResponse.json(
+        { error: 'Message history is too long' },
+        { status: 400 }
+      );
+    }
+
+    const isValidMessages = messages.every((message) => {
+      return (
+        message &&
+        (message.role === 'user' || message.role === 'model') &&
+        Array.isArray(message.parts) &&
+        message.parts.length === 1 &&
+        typeof message.parts[0]?.text === 'string' &&
+        message.parts[0].text.length <= 4000
+      );
+    });
+
+    if (!isValidMessages) {
+      return NextResponse.json(
+        { error: 'Invalid message format' },
         { status: 400 }
       );
     }
