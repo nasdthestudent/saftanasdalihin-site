@@ -10,7 +10,6 @@ export async function generateStaticParams() {
   const slugs = getAllProjectSlugs();
   // Log available slugs during dev for debugging static param generation
   if (process.env.NODE_ENV !== 'production') {
-    // eslint-disable-next-line no-console
     console.log('generateStaticParams -> slugs:', slugs);
   }
   return slugs;
@@ -35,7 +34,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
   // Debug logging to help diagnose 404s in dev
   if (process.env.NODE_ENV !== 'production') {
-    // eslint-disable-next-line no-console
     console.log('ProjectDetailPage -> requested slug:', slug, 'found:', Boolean(project));
   }
 

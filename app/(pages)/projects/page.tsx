@@ -3,9 +3,9 @@
 
 import { ProjectCard } from '@/components/sections/ProjectCard';
 import { PROJECTS_DATA } from '@/lib/data';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
-const containerVariants:any = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -15,7 +15,7 @@ const containerVariants:any = {
   },
 };
 
-const itemVariants:any = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,

@@ -3,9 +3,10 @@
 
 import { ContactForm } from "@/components/sections/ContactForm";
 import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
+import type { IconType } from "react-icons";
 
-const containerVariants: any = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -15,7 +16,7 @@ const containerVariants: any = {
   },
 };
 
-const itemVariants: any = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -72,7 +73,17 @@ export default function ContactPage() {
   );
 }
 
-const ContactInfoItem = ({ icon: Icon, title, value, link }: { icon: any, title: string, value: string, link?: string }) => (
+const ContactInfoItem = ({
+  icon: Icon,
+  title,
+  value,
+  link,
+}: {
+  icon: IconType;
+  title: string;
+  value: string;
+  link?: string;
+}) => (
   <div className="flex items-start gap-4 rounded-xl border p-4 shadow-sm">
     <Icon size={24} className="text-primary mt-1 shrink-0" />
     <div>

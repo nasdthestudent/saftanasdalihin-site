@@ -1,7 +1,7 @@
 // components/sections/ProjectDetailContent.tsx
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { DetailedProject } from '@/lib/types';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import { FaGithub, FaLink, FaTools } from 'react-icons/fa';
 import { ImageGallery } from './ImageGallery';
 
 // Varian animation for the entire page
-const pageVariants:any = {
+const pageVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 

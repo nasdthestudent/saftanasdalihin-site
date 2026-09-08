@@ -2,10 +2,10 @@
 "use client";
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 // Varian Animasi Staggered
-const containerVariants: any = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -15,7 +15,7 @@ const containerVariants: any = {
   },
 };
 
-const itemVariants: any = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -42,7 +42,7 @@ export const HeroSection = () => {
           variants={itemVariants} 
           className="text-xl text-primary font-medium"
         >
-          Hello, I'm <span className="text-3xl font-bold">Safta Nasdalihin</span>.
+          Hello, I&apos;m <span className="text-3xl font-bold">Safta Nasdalihin</span>.
         </motion.p>
         
         {/* Main Role/Title Line */}

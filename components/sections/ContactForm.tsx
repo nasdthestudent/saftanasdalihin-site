@@ -53,9 +53,9 @@ export const ContactForm = () => {
           message: '',
       });
 
-    } catch (error) {
+    } catch {
       setSubmissionStatus('error');
-      setErrorMessage('Connection failed. Please try again later.');
+      setErrorMessage('An unexpected error occurred. Please try again later.');
     }
   };
 
