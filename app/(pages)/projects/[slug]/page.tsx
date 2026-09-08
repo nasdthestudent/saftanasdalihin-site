@@ -3,6 +3,7 @@ import { getProjectBySlug, getAllProjectSlugs } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import { ProjectDetailContent } from '@/components/sections/ProjectDetailContent'; 
 import { DetailedProject } from '@/lib/types';
+import type { Metadata } from "next";
 
 
 // 1. Static Generation
@@ -16,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 // 2. Dynamic Metadata
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params, }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) return { title: 'Project Not Found' };
