@@ -1,16 +1,21 @@
 // app/layout.tsx
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 // Setup font
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter"
+  variable: "--font-inter",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -72,11 +77,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="flex flex-col min-h-screen"> 
               <Navbar />
-              <main className="container mx-auto px-4 py-8 grow"> 
+              <main className="mx-auto w-full max-w-7xl px-5 py-8 sm:px-8 lg:px-10 xl:px-12 grow"> 
                 {children}
               </main>
               <Footer />

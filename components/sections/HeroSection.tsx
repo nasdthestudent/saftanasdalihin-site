@@ -42,13 +42,13 @@ export const HeroSection = () => {
           variants={itemVariants} 
           className="text-xl text-primary font-medium"
         >
-          Hello, I&apos;m <span className="text-3xl font-bold">Safta Nasdalihin</span>.
+          Hello, I&apos;m <span className="text-2xl sm:text-3xl font-bold">Safta Nasdalihin</span>.
         </motion.p>
         
         {/* Main Role/Title Line */}
         <motion.h1 
           variants={itemVariants}
-          className="text-6xl md:text-8xl font-extrabold"
+          className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]"
         >
           A Smart Contract Developer Building Decentralized and Secure Applications on the Blockchain.
         </motion.h1>
