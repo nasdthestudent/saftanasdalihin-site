@@ -8,3 +8,9 @@ export const chatRateLimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(10, "1 m"),
   analytics: true,
 });
+
+export const contactRateLimit = new Ratelimit({
+  redis,
+  limiter: Ratelimit.slidingWindow(3, '10 m'),
+  analytics: true,
+});
