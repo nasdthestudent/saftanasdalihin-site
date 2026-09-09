@@ -1,6 +1,7 @@
 import { ApiError, GoogleGenAI } from '@google/genai';
 import { NextResponse } from 'next/server';
 import { SAFTA_CONTEXT_DATA } from '@/lib/safta-profile-data';
+import { chatRateLimit } from "@/lib/rate-limit";
 
 // Google Gemini AI Client Configuration
 const ai = new GoogleGenAI({
@@ -89,6 +90,28 @@ async function generateResponse(
 // --- POST function to handle chat requests ---
 export async function POST(req: Request) {
   try {
+    const forwardedFor = req.headers.get("x-forwarded-for");
+    const ip = forwardedFor?.split(",")[0]?.trim() ?? "unknown";
+
+    const { success, limit, remaining, reset } =
+      await chatRateLimit.limit(ip);
+
+    if (!success) {
+      return NextResponse.json(
+        {
+          error: "Too many requests. Please try again later.",
+        },
+        {
+          status: 429,
+          headers: {
+            "X-RateLimit-Limit": limit.toString(),
+            "X-RateLimit-Remaining": remaining.toString(),
+            "X-RateLimit-Reset": reset.toString(),
+          },
+        }
+      );
+    }
+
     const { messages } = await req.json();
 
     if (!Array.isArray(messages) || messages.length === 0) {
