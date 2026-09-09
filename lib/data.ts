@@ -72,7 +72,7 @@ export const PROJECTS_DATA: DetailedProject[] = [
       "Custom Errors & Events",
       "Foundry Testing",
     ],
-    galleryImages: ["/images/projects/voting.png"],
+    galleryImages: ["/images/projects/surachain.png"],
   },
 
   {
