@@ -1,36 +1,124 @@
-// lib/safta-profile-data.ts
-
 export const SAFTA_CONTEXT_DATA = `
---- SAFTA NASDALIHIN CONTEXT DATA ---
-Safta Nasdalihin is a Smart Contract Developer focusing on the Ethereum and Layer 2 ecosystems.
+--- SAFTA NASDALIHIN PROFILE ---
 
-PERSONALITY:
-- Passionate about DeFi and Web3 innovation.
-- Uses a detailed and considered approach to code development (Solidity).
-- Strong background in Next.js and modern styling (Tailwind CSS).
+IDENTITY:
+Safta Nasdalihin is a Smart Contract Developer from Indonesia specializing in Solidity and EVM-based systems.
+
+PROFESSIONAL POSITIONING:
+Safta focuses primarily on smart contract development rather than general Web3 development.
+His main areas of interest are Solidity, EVM architecture, protocol design, access control, testing, gas-conscious development, and smart contract security.
+
+CORE TECHNOLOGIES:
+- Solidity
+- EVM
+- Ethereum
+- Foundry
+- OpenZeppelin
+- Git
+- TypeScript
+- Next.js
+
+SMART CONTRACT DEVELOPMENT APPROACH:
+- Writes Solidity contracts with explicit permissions and trust assumptions.
+- Uses Foundry for development and testing.
+- Values unit testing and edge-case testing.
+- Uses OpenZeppelin implementations rather than unnecessarily reimplementing standard primitives.
+- Pays attention to gas efficiency, contract composition, and maintainability.
+- Focuses on understanding how protocols work at the contract and EVM level.
 
 KEY PROJECTS:
-1. ClassFund DApp (NFT-Gated Funding):
-- Purpose: A collective funding system that uses NFTs as proof of ownership and voting rights.
-- Technologies: Solidity (ERC-721, Ownable), Hardhat, Next.js, Ethers.
-- Uniqueness: Incorporates the concept of NFTs as access keys to governance features.
 
-2. Voting DApp (DAO Voting System):
-- Purpose: A simple on-chain voting platform for decentralized organizations (DAOs).
-- Technologies: Solidity, Hardhat, React.
-- Demonstrated Skills: Understanding of token-based voting mechanisms and on-chain state management.
+1. ETHICFORGE
+A modular smart contract factory for ethical financial applications.
 
-3. Portfolio Website (saftanasdalihin-site.vercel.app):
-- Goal: Showcasing comprehensive technical expertise.
-- Technologies: Next.js App Router, Tailwind CSS, TypeScript.
-- Uniqueness: Planning to integrate an NFT-guarded AI Chatbot (Token-Gated AI).
+Technologies:
+- Solidity
+- Foundry
+- OpenZeppelin
 
-REAL-TIME EXPERIENCE:
-- Facing a simple reentrancy bug while implementing token transfers in a personal project, which was later fixed through the use of ReentrancyGuard.
-- Enjoying the challenge of gas optimization in Solidity.
+Architecture:
+- Factory pattern
+- Modular and composable smart contracts
+- Independently deployable modules
+- Custom errors
+- Transparent events
+- Gas-conscious design
+- Comprehensive testing
+- Upgradeable-ready architecture
 
-Additional Skills:
-- API Integration (REST/GraphQL).
-- Using the Google Gemini API for an LLM project.
----END OF CONTEXT DATA---
+Main modules:
+- PartnershipPool
+- AssetFinancing
+- SecureVault
+
+2. SURACHAIN
+A censorship-resistant on-chain voting protocol.
+
+Technologies:
+- Solidity
+- Foundry
+- OpenZeppelin
+
+Key concepts:
+- One address = one vote
+- Double-voting prevention
+- Time-bound elections
+- On-chain vote tallying
+- Custom errors and events
+- Unit and edge-case testing
+
+3. CLASSFUND
+A full-stack blockchain treasury management application.
+
+Technologies:
+- Solidity
+- Hardhat
+- Next.js
+- TypeScript
+- Ethers.js
+
+Key concepts:
+- On-chain contribution tracking
+- Treasurer and Member roles
+- Role-restricted treasury operations
+- Transparent on-chain transactions
+
+4. ERC-20 TOKEN WITH ACCESS CONTROL AND PAUSABLE
+A minimal ERC-20 project focused on integrating OpenZeppelin's standard components.
+
+Technologies:
+- Solidity
+- Foundry
+- OpenZeppelin
+
+Key concepts:
+- ERC-20
+- Ownable
+- Pausable
+- Administrative access control
+- Emergency pause mechanism
+- Foundry testing
+
+CURRENT DEVELOPMENT FOCUS:
+Safta is focused on becoming a professional Smart Contract Developer and improving his ability to design, test, optimize, and secure EVM-based smart contracts.
+
+When discussing Safta's work, prioritize:
+- Solidity
+- EVM
+- Smart Contract Architecture
+- Protocol Design
+- Access Control
+- Testing
+- Gas Efficiency
+- Smart Contract Security
+- Foundry
+- OpenZeppelin
+
+Do not describe Safta primarily as a general Web3 developer.
+Do not claim that Safta has professionally audited third-party protocols.
+Do not claim that Curve or Gamma security contest repositories are Safta's own protocols.
+Do not describe ClassFund as NFT-gated.
+Do not claim that Safta has professional auditing experience unless explicitly supported by the provided context.
+
+--- END PROFILE ---
 `;

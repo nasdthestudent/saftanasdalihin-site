@@ -5,51 +5,144 @@ export type { DetailedProject } from "./types";
 // Detailed project data
 export const PROJECTS_DATA: DetailedProject[] = [
   {
-  slug: 'class-fund-smart-contract',
-  title: 'Class Fund / Group Treasury Smart Contract',
-  shortDescription: 'A simplified, on-chain treasury and group fund management system for collecting recurring contributions and secure withdrawals by a designated treasurer.',
-  thumbnail: '/images/projects/classfund.png',
-  tags: ['Blockchain', 'Smart Contract', 'Solidity', 'Fund Management', 'EVM'],
-  liveUrl: 'https://sepolia.etherscan.io/address/0x43c9c8ced4655a2b7ee26d680935cb0d82bdf071#code',
-  githubUrl: 'https://github.com/nasd10/class-fund',
-  fullDescription: 'This project implements a basic treasury model using Solidity. It allows designated members to contribute funds periodically (pay function), tracks contributions per period, and enables a single treasurer to manage and securely withdraw the total balance. It provides a transparent, immutable ledger for group finances.',
-  role: 'Smart Contract Developer: Responsible for the full development lifecycle, including contract design, implementation of contribution and withdrawal logic, and event logging for transparency.',
-  challenge: 'Designing a simple, gas-efficient structure to track contributions against specific "periods" and ensuring that the withdrawal mechanism was restricted only to the authorized treasurer (single-point of control).',
-  solution: 'Utilized `mapping` for period-based contribution tracking and implemented an `onlyTreasurer` modifier to secure critical functions like `withdraw` and `nextPeriod`, enhancing the contract’s integrity and security.',
-  keyFeatures: ['Period-Based Contribution Tracking', 'Designated Treasurer/Single-Sig Authority', 'Secure Withdrawal Mechanism', 'Transparent On-Chain Events'],
-  galleryImages: ['/images/projects/classfund.png'],
+    slug: "ethicforge",
+    title: "EthicForge — Modular Smart Contract Factory",
+    shortDescription:
+      "A modular smart contract system for ethical financial applications, built around reusable and composable on-chain modules.",
+    thumbnail: "/images/projects/ethicforge.png",
+    tags: [
+      "Solidity",
+      "Foundry",
+      "OpenZeppelin",
+      "Smart Contract",
+      "Protocol Design",
+      "Modular Architecture",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/saftanasdalihin/ethicforge",
+    fullDescription:
+      "EthicForge is a modular smart contract architecture designed as a collection of reusable building blocks for financial applications. The system uses a factory pattern to deploy independent modules that can be composed for different use cases, including profit-sharing partnerships, asset financing, and secure asset custody.",
+    role:
+      "Smart Contract Developer: Designed and implemented the core contract architecture, modular components, custom errors, access control, and testing strategy using Solidity and Foundry.",
+    challenge:
+      "The main challenge was designing reusable contracts without coupling the modules too tightly, while keeping permissions explicit and the architecture easy to extend.",
+    solution:
+      "Implemented a factory-based architecture with independently deployable modules such as PartnershipPool, AssetFinancing, and SecureVault. The system uses custom errors, transparent events, and reusable components to keep the protocol modular and maintainable.",
+    keyFeatures: [
+      "Factory-Based Contract Deployment",
+      "Composable Smart Contract Modules",
+      "Explicit Access Control",
+      "Custom Errors & Events",
+      "Gas-Conscious Contract Design",
+      "Comprehensive Foundry Testing",
+      "Upgradeable-Ready Architecture",
+    ],
+    galleryImages: ["/images/projects/ethicforge.png"],
   },
-  
+
   {
-    slug: 'basic-onchain-voting-system',
-    title: 'Basic On-Chain Voting System',
-    shortDescription: 'A simplified, secure smart contract for decentralized voting, preventing users from voting multiple times and tracking results transparently.',
-    thumbnail: '/images/projects/voting.png',
-    tags: ['Solidity', 'Smart Contract', 'Governance', 'DApp'],
-    liveUrl: 'https://sepolia.etherscan.io/address/0x0219d0B5352fC9776D88F62Ef0bB95BF12d95F7D#code',
-    githubUrl: 'https://github.com/nasd10/voting-smart-contract',
-    fullDescription: 'This project implements a foundational voting mechanism using Solidity. It ensures that each unique address can cast only one vote, preventing manipulation. The contract registers two candidates upon deployment and securely increments the vote count, providing immediate and auditable results.',
-    role: 'Smart Contract Developer: Responsible for designing the core voting logic, including the single-vote restriction and candidate initialization.',
-    challenge: 'The primary challenge was implementing a secure method to restrict voting to a single instance per user (address) while maintaining simplicity and gas efficiency.',
-    solution: 'Implemented a boolean `mapping(address => bool) public hasVoted` which is checked using `require(!hasVoted[msg.sender], ...)` at the start of the `vote()` function, guaranteeing one-time participation.',
-    keyFeatures: ['Single-Vote Restriction (One Address, One Vote)', 'On-Chain Vote Tallying', 'Transparent Results (View Functions)', 'Basic Candidate Registration'],
-    galleryImages: ['/images/projects/voting.png'],
+    slug: "sura-chain",
+    title: "SuraChain — On-Chain Voting Protocol",
+    shortDescription:
+      "A censorship-resistant on-chain voting protocol focused on transparent vote execution, single-vote enforcement, and secure contract logic.",
+    thumbnail: "/images/projects/surachain.png",
+    tags: [
+      "Solidity",
+      "Foundry",
+      "OpenZeppelin",
+      "EVM",
+      "Governance",
+      "Smart Contract Security",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/saftanasdalihin/sura-chain",
+    fullDescription:
+      "SuraChain is an on-chain voting protocol where voting activity is recorded and verified directly on the blockchain. The contract enforces one-address-one-vote and time-bound elections while exposing results through transparent on-chain state.",
+    role:
+      "Smart Contract Developer: Designed and implemented the voting logic, participation restrictions, election timing, events, and Foundry test suite.",
+    challenge:
+      "The main challenge was enforcing single-vote participation and election deadlines while keeping the contract logic simple, transparent, and gas-conscious.",
+    solution:
+      "Implemented address-based vote tracking, deadline enforcement, custom errors, events, and comprehensive unit and edge-case testing with Foundry.",
+    keyFeatures: [
+      "One Address = One Vote",
+      "Double-Voting Prevention",
+      "Time-Bound Elections",
+      "On-Chain Vote Tallying",
+      "Custom Errors & Events",
+      "Foundry Testing",
+    ],
+    galleryImages: ["/images/projects/voting.png"],
   },
+
   {
-    slug: 'simple-owner-restricted-storage',
-    title: 'Simple Smart Contract with Owner Restriction',
-    shortDescription: 'A foundational Solidity contract demonstrating access control via the `onlyOwner` modifier, allowing only the deployer to modify a stored variable.',
-    thumbnail: '/images/projects/simple-smart-contract.png',
-    tags: ['Solidity', 'Smart Contract', 'Access Control', 'EVM', 'Remix'],
-    liveUrl: 'https://sepolia.etherscan.io/address/0x0A5A5ecEECC9E5edD56E91675847d871F4BA2ec5#code',
-    githubUrl: 'https://github.com/nasd10/simple-smart-contract',
-    fullDescription: 'This project serves as an essential exercise in Solidity, focusing on core concepts. It initializes a contract owner upon deployment and uses a custom `onlyOwner` modifier to secure the `setAngka` function, ensuring that sensitive state modifications are restricted. It also includes a basic `pure` function (`addNum`) for calculation practice.',
-    role: 'Solidity Learner & Implementer: Focused on writing clean, secure code demonstrating mastery of modifiers and basic state management in Solidity.',
-    challenge: 'The core challenge was securely implementing the access restriction logic to protect the `angka` state variable, ensuring only the original deployer could execute the critical `setAngka` function.',
-    solution: 'Implemented the `onlyOwner` modifier which utilizes `require(msg.sender == owner, ...)` to revert transactions from unauthorized addresses, standardizing access control, and improving code readability.',
-    keyFeatures: ['Owner-Controlled State Variable', 'Custom `onlyOwner` Modifier', 'Basic Pure Function (`addNum`)', 'Secure Access Restriction'],
-    galleryImages: ['/images/projects/simple-smart-contract.png'],
-  }
+    slug: "classfund",
+    title: "ClassFund — Group Treasury Smart Contract",
+    shortDescription:
+      "A blockchain-based treasury management system for transparent group contributions and role-restricted withdrawals.",
+    thumbnail: "/images/projects/classfund.png",
+    tags: [
+      "Solidity",
+      "Smart Contract",
+      "EVM",
+      "Treasury",
+      "Access Control",
+      "Hardhat",
+    ],
+    liveUrl:
+      "https://sepolia.etherscan.io/address/0x43c9c8ced4655a2b7ee26d680935cb0d82bdf071#code",
+    githubUrl: "https://github.com/saftanasdalihin/classfund",
+    fullDescription:
+      "ClassFund is a full-stack blockchain application for managing shared class funds transparently on-chain. The smart contract tracks contributions and restricts treasury operations according to defined roles.",
+    role:
+      "Smart Contract Developer: Designed the treasury logic, contribution tracking, role-based permissions, withdrawal mechanism, and contract integration with the frontend.",
+    challenge:
+      "The main challenge was maintaining transparent fund accounting while ensuring sensitive treasury operations could only be executed by authorized participants.",
+    solution:
+      "Implemented on-chain contribution tracking, role-based permissions between Treasurer and Members, and restricted treasury operations through Solidity access control.",
+    keyFeatures: [
+      "On-Chain Contribution Tracking",
+      "Role-Based Treasury Permissions",
+      "Restricted Withdrawals",
+      "Transparent Transaction History",
+      "Full-Stack DApp Integration",
+    ],
+    galleryImages: ["/images/projects/classfund.png"],
+  },
+
+  {
+    slug: "erc20-access-control",
+    title: "ERC-20 Token — Access Control & Pausable",
+    shortDescription:
+      "A minimal ERC-20 token implementation demonstrating OpenZeppelin integration, ownership, emergency pausing, and Foundry testing.",
+    thumbnail: "/images/projects/erc20.png",
+    tags: [
+      "Solidity",
+      "Foundry",
+      "OpenZeppelin",
+      "ERC-20",
+      "Access Control",
+      "Pausable",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/saftanasdalihin/erc-20",
+    fullDescription:
+      "This project explores the integration of OpenZeppelin's ERC20, Ownable, and Pausable components into a minimal token contract. Rather than reimplementing standard primitives, the project focuses on composing established components and verifying their intended behavior through Foundry tests.",
+    role:
+      "Smart Contract Developer: Integrated OpenZeppelin modules, implemented the token-specific contract logic, and built the Foundry test suite.",
+    challenge:
+      "The main challenge was understanding how standard OpenZeppelin primitives interact and ensuring administrative permissions and emergency controls behave as intended.",
+    solution:
+      "Combined ERC20 token functionality with Ownable and Pausable, then verified ownership, token transfers, access restrictions, and pause behavior through automated tests.",
+    keyFeatures: [
+      "ERC-20 Token Standard",
+      "Owner-Based Access Control",
+      "Emergency Pause Mechanism",
+      "OpenZeppelin Integration",
+      "Foundry Testing",
+    ],
+    galleryImages: ["/images/projects/erc20.png"],
+  },
 ];
 
 // Helper function to fetch data by slug

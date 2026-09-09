@@ -50,18 +50,25 @@ export const AboutSection = () => {
         {/* Text Coloum (Bio) */}
         <div className="lg:w-2/3">
           <p className="mb-4 text-lg text-foreground/80">
-            Hello! I&apos;m Safta Nasdalihin, an aspiring <strong>Smart Contract Developer</strong> from Indonesia, focused on building secure and reliable applications with <strong>Solidity</strong> and the <strong>EVM</strong>. 
-            I enjoy turning ideas into practical smart contract systems while continuously learning about blockchain architecture, protocol design, and security.
+            Hello! I&apos;m Safta Nasdalihin, a{" "}
+            <strong>Smart Contract Developer</strong> from Indonesia focused on
+            building secure and reliable systems with <strong>Solidity</strong>{" "}
+            and the <strong>EVM</strong>.
           </p>
 
           <p className="mb-4 text-lg text-foreground/80">
-            My current focus is on <strong>smart contract development</strong>, especially understanding how decentralized systems work under the hood. 
-            I build and test my contracts using <strong>Foundry</strong>, with an emphasis on writing clear Solidity code, designing robust contract logic, and understanding the trust assumptions behind on-chain applications.
+            My work centers on <strong>smart contract architecture</strong>,
+            <strong> protocol design</strong>, access control, testing, and
+            security. I use <strong>Foundry</strong> for development and testing
+            and <strong>OpenZeppelin</strong> for battle-tested contract
+            primitives.
           </p>
 
           <p className="mb-6 text-lg font-medium">
-            I&apos;m interested in the problems blockchain can solve through <strong>trustless execution, transparency, and programmable ownership</strong>. 
-            My goal is to grow into a professional smart contract developer and contribute to building decentralized systems that are useful, secure, and genuinely meaningful.
+            I&apos;m interested in how blockchain can replace trusted intermediaries
+            with <strong>transparent, verifiable, and programmable systems</strong>.
+            My goal is to build smart contracts that are not only functional,
+            but also deliberate about permissions, trust assumptions, and security.
           </p>
 
           {/* Tombol CTA */}
